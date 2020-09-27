@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  php56_fpm:
+    build:
+      context: ./php5.6-fpm
+      dockerfile: Dockerfile
+    ports:
+      - 9056:9000
+    volumes:
+      - /var/www:/var/www
+  php70_fpm:
+    build:
+      context: ./php7.0-fpm
+      dockerfile: Dockerfile
+    ports:
+      - 9070:9000
+    volumes:
+      - /var/www:/var/www
+  php71_fpm:
+    build:
+      context: ./php7.1-fpm
+      dockerfile: Dockerfile
+    ports:
+      - 9071:9000
+    volumes:
+      - /var/www:/var/www
+  php72_fpm:
+    build:
+      context: ./php7.2-fpm
+      dockerfile: Dockerfile
+    ports:
+      - 9072:9000
+    volumes:
+      - /var/www:/var/www
+  php73_fpm:
+    build:
+      context: ./php7.3-fpm
+      dockerfile: Dockerfile
+    ports:
+      - 9073:9000
+    volumes:
+      - /var/www:/var/www
+  php74_fpm:
+    build:
+      context: ./php7.4-fpm
+      dockerfile: Dockerfile
+    ports:
+      - 9074:9000
+    volumes:
+      - /var/www:/var/www
