@@ -1,6 +1,14 @@
 version: "3.8"
 
 services:
+  php54_fpm:
+    build:
+      context: ./php5.4-fpm
+      dockerfile: Dockerfile
+    ports:
+      - 9054:9000
+    volumes:
+      - /var/www:/var/www
   php56_fpm:
     build:
       context: ./php5.6-fpm
